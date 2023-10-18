@@ -1,0 +1,61 @@
+body {
+    box-sizing: border-box;
+    margin: 50px 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    /* border: 1px solid red; */
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    width: 600px;
+}
+
+/* .container * {
+    border: 1px solid blue;
+} */
+
+header {
+    flex-basis: 300px;
+}
+
+.add-task {
+    flex-basis: 50px;
+}
+
+.tasks-group {
+    flex-basis: 300px;
+}
+
+/* Header styles*/
+.header-container {
+    position: relative;
+}
+
+.header-container img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.header-todo-label {
+    padding: 4px 8px;
+    color: white;
+    background: rgba(0,0,0,.8);
+    font-size: 24px;
+    font-weight: 700px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
