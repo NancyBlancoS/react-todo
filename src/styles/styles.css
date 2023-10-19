@@ -9,6 +9,13 @@ body {
 *::after {
     box-sizing: inherit;
 }
+/* Global Styles*/
+.task-btn {
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+}
 
 .container {
     /* border: 1px solid red; */
@@ -58,4 +65,32 @@ header {
     position: absolute;
     bottom: 15px;
     left: 10px;
+}
+
+/* Add tasks*/
+
+.add-task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+}
+.add-task div:first-child {
+    flex-basis: 70%;
+}
+
+.add-task div:last-child {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-task input {
+    height: 40px;
+    width: 100%;
+}
+
+.add-task button {
+    width: 60px;
+    height: 40px;
 }
