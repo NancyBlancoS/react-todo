@@ -1,0 +1,125 @@
+body {
+    box-sizing: border-box;
+    margin: 50px 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* Global Styles*/
+.task-btn {
+    background: #007bff;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    height: 35px;
+}
+
+.container {
+    /* border: 1px solid red; */
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    width: 600px;
+}
+
+/* .container * {
+    border: 1px solid blue;
+} */
+
+header {
+    flex-basis: 300px;
+}
+
+.add-task {
+    flex-basis: 50px;
+}
+
+.tasks-group {
+    max-height: 230px;
+    overflow: auto;
+}
+
+/* Header styles*/
+.header-container {
+    position: relative;
+}
+
+.header-container img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.header-todo-label {
+    background: rgba(0,0,0,.5);
+    border-radius: 4px;
+    bottom: 25px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700px;
+    left: 20px;
+    padding: 4px 8px;
+    position: absolute;
+}
+
+/* Add tasks*/
+
+.add-task {
+    padding: 10px 0;
+}
+
+.add-task div:first-child {
+    flex-basis: 70%;
+}
+
+.add-task div:last-child {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.add-task input {
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.add-task button {
+    width: 60px;
+}
+
+/* Task */
+
+.task-container {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    display: flex;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.task-container * {
+    flex: 1;
+}
+
+.task-container div:first-child {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.task-container div:last-child {
+    text-align: right;
+}
+
+.delete-btn {
+    width: 70px;
+}
