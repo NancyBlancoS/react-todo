@@ -1,4 +1,6 @@
-import headerImg from '../assets/headerImg.jpg'
+import headerImg from '../assets/img/headerImg.jpg'
+
+import '../styles/styles.css';
 
 function Header() {
     return (

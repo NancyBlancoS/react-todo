@@ -1,11 +1,12 @@
 import '../styles/styles.css'
 
 function Layout ({children}) {
+    const [headerComponent, addTasksComponent, tasksGroupComponent] = children;
     return (
         <div className="container">
-            <header>{children}</header>
-            <div className="add-task">Add Task</div>
-            <div className="tasks-group">Tasks</div>
+            <header>{headerComponent}</header>
+            <div className="add-task">{addTasksComponent}</div>
+            <div className="tasks-group">{tasksGroupComponent}</div>
             
         </div>
     )

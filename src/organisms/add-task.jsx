@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 
 import '../styles/styles.css';
 
@@ -9,15 +9,24 @@ function AddTask({onAddClick}) {
         setAddTaskIpt(e.target.value);
     };
 
+    const handleOnAddClick = (e) => {
+        e.preventDefault();
+
+        onAddClick(addTaskIpt);
+        setAddTaskIpt('');
+    };
+
     return (
-        <div className="add-task">
-            <div>
-                <input type="text" name="add-task-ipt" id="add-task-ipt" value = {addTaskIpt} onChange={handleInputChange} />
+        <form  onSubmit={handleOnAddClick}>
+            <div className="add-task">
+                <div>
+                    <input type="text" name="add-task-ipt" id="add-task-ipt" value = {addTaskIpt} onChange={handleInputChange} placeholder="  Enter Task..."/>
+                </div>
+                <div>
+                    <button className="task-btn" onClick={handleOnAddClick} type="submit" >Add</button>
+                </div>
             </div>
-            <div>
-                <button className="task-btn" onClick={() => onAddClick(addTaskIpt)} >Add</button>
-            </div>
-        </div>
+        </form>
     )
 }
 export default AddTask;

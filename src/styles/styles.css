@@ -12,9 +12,10 @@ body {
 /* Global Styles*/
 .task-btn {
     background: #007bff;
-    color: #fff;
-    border-radius: 4px;
     border: 0;
+    border-radius: 4px;
+    color: #fff;
+    height: 35px;
 }
 
 .container {
@@ -42,7 +43,8 @@ header {
 }
 
 .tasks-group {
-    flex-basis: 300px;
+    max-height: 230px;
+    overflow: auto;
 }
 
 /* Header styles*/
@@ -56,41 +58,68 @@ header {
 }
 
 .header-todo-label {
-    padding: 4px 8px;
+    background: rgba(0,0,0,.5);
+    border-radius: 4px;
+    bottom: 25px;
     color: white;
-    background: rgba(0,0,0,.8);
     font-size: 24px;
     font-weight: 700px;
-    border-radius: 4px;
+    left: 20px;
+    padding: 4px 8px;
     position: absolute;
-    bottom: 15px;
-    left: 10px;
 }
 
 /* Add tasks*/
 
 .add-task {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 10px 0;
 }
+
 .add-task div:first-child {
     flex-basis: 70%;
 }
 
 .add-task div:last-child {
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: flex-end;
 }
 
 .add-task input {
     height: 40px;
     width: 100%;
+    border-radius: 6px;
 }
 
 .add-task button {
     width: 60px;
-    height: 40px;
+}
+
+/* Task */
+
+.task-container {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    display: flex;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.task-container * {
+    flex: 1;
+}
+
+.task-container div:first-child {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.task-container div:last-child {
+    text-align: right;
+}
+
+.delete-btn {
+    width: 70px;
 }
