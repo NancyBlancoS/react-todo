@@ -10,11 +10,12 @@ function App() {
   const [tasks, setTasks] = React.useState([]);
 
   const addTask = (taskName) => {
-    const isValidTaskName = tasks.includes(taskName.toLowerCase());
-
-    if (!isValidTaskName && taskName !== '') {
+    const isValidTaskName = !tasks.includes(taskName.toLowerCase()) && taskName !== '';
+    
+    if (isValidTaskName) {
       setTasks([...tasks, taskName.toLowerCase()]);
     }
+
   };
 
   const deleteTask = (taskToDelete) => {
